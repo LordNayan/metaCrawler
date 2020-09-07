@@ -55,6 +55,7 @@ async function metaCrawl(req, res) {
         res.send(result);
     }
     catch (error) {
+        util.print();
         util.log("Error in metaCrawl", start, "error", error);
         error = util.error("Data not found", "101");
         let statusCode = error.http_code;
